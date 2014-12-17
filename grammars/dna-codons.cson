@@ -1,0 +1,22 @@
+# If this is your first time writing a language grammar, check out:
+#   - http://manual.macromates.com/en/language_grammars
+
+'scopeName': 'source.dna-codons'
+'name': 'DNA Codons Grammar'
+'fileTypes': [
+  'dna'
+]
+'patterns': [
+  {
+    'match': '([ACGT]{3})([ACGT]{3})'
+    'captures':
+      '1':
+        'name': 'codon.even'
+      '2':
+        'name': 'codon.odd'
+  }
+  {
+    'match': '([ACGT]{3})'
+    'name': 'codon.even'
+  }
+]
